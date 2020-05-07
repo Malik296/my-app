@@ -1,0 +1,421 @@
+body {
+  margin: 0;
+  line-height: 1.15;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  border: 1px solid;
+}
+
+.float-right {
+  position: absolute;
+  right: 0;
+  transition: width 0.5s;
+}
+
+/*------------------------------------------------------*/
+
+.left-side-div {
+  width: 45%;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  /* background-color: azure; */
+}
+
+.steps-container {
+  background: rgba(255, 255, 255, 0.192);
+  padding: 20px;
+  width: 33%;
+  /* border: 1px solid; */
+  box-shadow: 5px 0 10px rgba(0, 0, 255, 0.555);
+  height: 100%;
+}
+
+/*--------------------------------------------*/
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description { 
+  color: rgba(255, 255, 255, 0.685);
+} 
+
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.45);
+
+}
+.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
+  color: rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+  color: rgba(0, 0, 0, 0.65);
+  color: rgba(255, 255, 255, 0.65);
+
+}
+
+.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
+  color: rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.45);
+}
+/*--------------------------------------------*/
+
+.steps h2 {
+  text-align: center;
+}
+
+.input-forms-container {
+  width: 65%;
+  padding-top: 10px;
+  /* border: 1px solid; */
+  height: 100%;
+  position: relative;
+}
+
+/*Style for tooltype*/
+/*--------------------------------------------------------------*/
+
+.tooltiptext {
+  position: absolute;
+  width: 130px;
+  left: 104%; 
+  top: -8px;
+  background-color: rgba(218, 75, 75, 0.849);
+  box-shadow: 0 0 10px black;
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  z-index: 1;
+}
+
+.tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent rgba(212, 93, 93, 0.863) transparent transparent;
+}
+
+/*--------------------------------------------------------------*/
+
+
+/* First input card */
+/*--------------------------------------------------*/
+
+.first-step-container {
+  display: none;
+  background-color: rgb(41, 37, 37);
+  color: rgba(255, 255, 255, 0.507);
+  width: 300px;
+  height: 420px;
+  padding: 15px;
+  /* border: 1px solid; */
+  border-radius: 3px;
+  position: absolute;
+  box-shadow: 0 0 20px white;
+
+}
+
+.first-step-container h2 {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+hr {
+  border: 1px solid rgba(255, 255, 255, 0.295);
+}
+
+.first-step-container span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.first-step-container input[type=text]:focus {
+  background-color: lightgray;
+}
+
+#date-input {
+  width: 60px;
+}
+
+.type-select {
+  text-align: center;
+  width: 100px;
+  font-size: 20px;
+  margin: 5px 0 30px;
+  padding: 5px;
+}
+
+.bank-select {
+  text-align: center;
+  width: 180px;
+  font-size: 20px;
+  margin: 5px 0 30px;
+  padding: 5px;
+}
+
+/*------------------------------------------------------*/
+
+/* Second input card */
+/*--------------------------------------------------*/
+
+.second-step-container {
+  display: none;
+  background-color: rgb(41, 37, 37);
+  color: white;
+  width: 300px;
+  height: 250px;
+  padding: 15px;
+  border-radius: 3px;
+  position: absolute;
+  box-shadow: 0 0 20px white;
+}
+
+.second-step-container h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: white;
+}
+
+.step-visible {
+  display: block;
+}
+
+.second-step-container span {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.onfocus-class {
+  box-shadow: 0 0 20px red;
+  outline: 3px solid rgba(255, 0, 0, 0.678);
+}
+
+/*Final Step*/
+/*---------------------------------------------------------*/
+.finalStep-container {
+  display: none;
+  background-color: rgb(41, 37, 37);
+  color: white;
+  min-width: 300px;
+  min-height: 400px;
+  padding: 15px;
+  border-radius: 3px;
+  position: absolute;
+  box-shadow: 0 0 20px white;
+}
+
+.finalStep-container h2 {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.finalStep-container table {
+  width: 100%;
+}
+
+.step-visible {
+  display: block;
+}
+
+/*---------------------------------------------------------------*/
+.card-container {
+  width: 396px;
+  height: 250px;
+  margin: 50px auto 0;
+  perspective: 1000px;
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-container:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  padding: 15px;
+  box-shadow: 0 0 40px white;
+}
+
+.flip-card-front {
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.flip-card-back {
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  transform: rotateY(180deg);
+}
+
+.back-side {
+  transform: rotateY(180deg);
+}
+
+.name-div-min-height {
+  height: 21px;
+}
+
+/*-------------------------------------------------------*/
+
+.banc-logo {
+  height: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banc-logo img {
+  height: 100%;
+}
+
+.chip-div {
+  height: 25%;
+  display: flex;
+  align-items: center;
+}
+
+.num {
+  height: 16%;
+  display: flex;
+  justify-content: center;
+}
+
+.sections h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 2.3em;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.chip {
+  height: 130%;
+}
+
+.bottom {
+  padding-left: 5px;
+  height: 74.8px;
+}
+
+.bottom h5 {
+  font-size: 1em;
+  color: #fff;
+  margin: 5px;
+  width: 100%;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+hr {
+  border-top: 1px solid #777777;
+  margin: 10px auto 15px ;
+}
+
+.cart-type {
+  height: 50px;
+  position: relative;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+
+.cart-type img {
+  height: 100%;
+}
+
+.left-bottom {
+  width: 20%;
+}
+
+.valid {
+  font-size: 12px;
+}
+
+/*-------------------------------------------------------*/
+
+.flip-card-back {
+  padding: 20px 0;
+}
+
+.section-black {
+  height: 40px;
+  background-color: black;
+}
+
+.section-white {
+  height: 35px;
+  background-color: lightgrey;
+  width: 60%;
+  padding: 5px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-white span {
+  color: #333;
+  font-style: italic;
+}
+
+.section-white h4 {
+  margin: 0;
+  font-weight: normal;
+  color: black;
+}
+
+/* .hiddenElement {
+  display: none;
+} */
+
+
+.add-button {
+  position: absolute;
+  /* border: 1px solid white; */
+  width: 100vw;
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+}
+
+.add-button img {
+  cursor: pointer;
+}
+
+.add-button img:hover {
+  opacity: 0.7;
+}
+
+

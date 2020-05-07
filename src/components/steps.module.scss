@@ -1,0 +1,74 @@
+.buttonsDiv {
+    position: absolute;
+    width: 90%;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    button {
+        border-style: none;
+        width: 120px;
+        cursor: pointer;
+        padding: 10px 10px;
+        border-radius: 2px;
+        color: white;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+
+    .nextButton {
+        background-color: #1890ff;
+    }
+
+    .prevButton {
+        background-color: rgba(255, 0, 0, 0.801);
+    }
+
+    .disable {
+        background-color: #777777;
+        color: white;
+        opacity: 0.5;
+        cursor: auto;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+
+.infoTable {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.829);
+    background-color: rgb(65, 65, 65);
+    tbody tr td {
+        padding: 10px 5px;
+    }
+
+    tbody tr td:first-child {
+        padding-right: 10px;
+        text-align: right;
+        border-right: 1px solid rgba(145, 145, 145, 0.356);
+    }
+
+    tbody tr td:last-child {
+        width: 65%;
+        color: rgba(255, 255, 255, 0.575);
+    }
+
+    tbody tr:nth-child(2n) {
+        background-color: rgb(80, 79, 79);
+    }
+}
+
+.stepsClass {
+    .ant-steps-item-description{
+        
+        color: rgba(255, 0, 0, 0.801);
+    }
+    .ant-steps-item-content {
+        background-color: #777777;
+    }
+}
+
